@@ -22,7 +22,6 @@ public class FravegaPage extends BasePage {
     }
 
     public void navigateToFravegaPage() {
-        waitForPageToLoad();
         navigateTo(BASE_URL);
         validateElementIsVisible(fravegaLogo);
     }

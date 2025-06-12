@@ -19,6 +19,6 @@ public class TestRunner extends AbstractTestNGCucumberTests {
     public void setupEnvironment() {
         System.setProperty("cucumber.publish.quiet", "true");
         System.setProperty("browser", "chrome"); // "chrome", "firefox", o "edge"
-        System.setProperty("headless", "true"); // "true" para modo sin interfaz gráfica
+        System.setProperty("headless", "false"); // "true" para modo sin interfaz gráfica
     }
 }
