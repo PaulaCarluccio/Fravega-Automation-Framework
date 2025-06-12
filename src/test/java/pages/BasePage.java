@@ -6,7 +6,6 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
 import utils.ReportManager;
 
 public class BasePage {
@@ -73,7 +72,7 @@ public class BasePage {
         );
     }
 
-    public Wait<WebDriver> fluentWait() {
+    public FluentWait<WebDriver> fluentWait() {
         return new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(DEFAULT_TIMEOUT))
                 .pollingEvery(Duration.ofMillis(DEFAULT_POLLING))

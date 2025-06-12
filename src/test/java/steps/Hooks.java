@@ -3,7 +3,6 @@ package steps;
 import io.cucumber.java.*;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import utils.ConfigLoader;
 import utils.DriverManager;
 import utils.ReportManager;
 
@@ -11,10 +10,8 @@ public class Hooks {
 
     @Before
     public void setUp(Scenario escenario) {
-        if (DriverManager.getDriver() == null) {
-            String browser = System.getProperty("browser", "edge");
-            DriverManager.initializeDriver(browser);
-        }
+        String browser = System.getProperty("browser", "edge");
+        DriverManager.initializeDriver(browser);
         ReportManager.setScenario(escenario);
     }
 
